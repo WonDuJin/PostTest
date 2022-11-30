@@ -16,6 +16,7 @@ data.addEventListener('submit',(e)=>{
   }
   // console.log(bonam)
   
+  //fetch를 사용하여 post방식으로 전송 JSON.stringif()를 사용하여 객체화
   fetch("http://localhost:5050/post",{
     method : "POST",
     headers :{
@@ -29,11 +30,12 @@ data.addEventListener('submit',(e)=>{
   
 })
 
-const buttonClick = document.getElementById("button");
+// 페이지 이동을 시켜보려고 시도한 것들
+// const buttonClick = document.getElementById("button");
 
 // buttonClick.addEventListener("click",()=>{
 //   location.href="http://localhost:5050/post"
 // })
-const movePage =()=>{
-  location.href="http://localhost:5050/post"
-}
+// const movePage =()=>{
+//   location.href="http://localhost:5050/post"
+// }

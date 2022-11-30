@@ -1,9 +1,10 @@
 const http = require("http");
 const fs = require("fs");
 
+// http 서버 만들기
 const server = http.createServer((req, res)=>{
 
-
+  // 반복 사용되는 것들 함수화
   const staticRoute=(filename,statusCode,contentType)=>{
     const readData = fs.readFileSync(filename,(err)=>{
       if(err) throw  err;
@@ -12,6 +13,8 @@ const server = http.createServer((req, res)=>{
     res.write(readData);
     res.end();
   }
+
+  //GET , POST방식으로 처리
   if (req.method === "POST","GET"){
     let url = req.url;
     switch (url){
