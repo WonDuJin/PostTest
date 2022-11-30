@@ -1,21 +1,22 @@
 const data = document.getElementById("form");
 
-
-data.addEventListener('click',(e)=>{
+// 어제는 form으로만 처리했다면 이번에는 fetch를 써보고싶어서 fetch를 사용
+data.addEventListener('submit',(e)=>{
   e.preventDefault();
   
   let test = []
   test = new FormData(data);
   let name = [...test][0][0]
   let value = [...test][0][1]
-  console.log(name, value) 
+  // console.log(name, value) 
   
+  //객체로 만들어지는지 확인.
   let bonam = {
     'name': value
   }
-  console.log(bonam)
+  // console.log(bonam)
   
-  fetch("http://localhost:5050",{
+  fetch("http://localhost:5050/post",{
     method : "POST",
     headers :{
       "Content-Type" : "application/json ",
@@ -30,9 +31,9 @@ data.addEventListener('click',(e)=>{
 
 const buttonClick = document.getElementById("button");
 
-buttonClick.addEventListener("click",()=>{
-  location.href="http://localhost:5050/post"
-})
-// const movePage =()=>{
+// buttonClick.addEventListener("click",()=>{
 //   location.href="http://localhost:5050/post"
-// }
+// })
+const movePage =()=>{
+  location.href="http://localhost:5050/post"
+}

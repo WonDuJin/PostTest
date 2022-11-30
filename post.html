@@ -12,28 +12,29 @@
     <form id="form">
       <input id="input" name = "test" type="text">
       <button id="button" type="submit" onclick="movePage()">버튼</button>
+      <a href="http://localhost:5050/post">포스트로이동</a>
     </form>
   </div>
 
-  <script>
-    // const data = document.getElementById("form");
+  <!-- <script>
+    const data = document.getElementById("form");
 
-    // data.addEventListener('submit',(e)=>{
-    //   e.preventDefault();
+    data.addEventListener('submit',(e)=>{
+      e.preventDefault();
 
-    //   const test = new FormData(data);
-    //   console.log([...test])
+      const test = new FormData(data);
+      console.log([...test])
       
-    //   fetch("http://127.0.0.1:5432/post",{
-    //     method : "POST",
-    //     headers :{
-    //       "Content-Type" : "application/json",
-    //     },
-    //     body : test,        
-    //   })
-    //   .then((response) => response.json())
-    //   .then((data)=>console.log(data));
-    // })
-  </script>
+      fetch("http://127.0.0.1:5432/post",{
+        method : "POST",
+        headers :{
+          "Content-Type" : "application/json",
+        },
+        body : test,        
+      })
+      .then((response) => response.json())
+      .then((data)=>console.log(data));
+    })
+  </script> -->
 </body>
 </html>

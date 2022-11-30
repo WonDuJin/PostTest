@@ -12,7 +12,6 @@ const server = http.createServer((req, res)=>{
     res.write(readData);
     res.end();
   }
-  let test = '';
   if (req.method === "POST","GET"){
     let url = req.url;
     switch (url){
@@ -23,6 +22,7 @@ const server = http.createServer((req, res)=>{
           staticRoute("./fetch.js",200,"text/javascript")
         break;
       case "/post":  
+        let test = '';
         req.on('data',(data)=>{
           test = decodeURI(data)
           console.log(test)          
