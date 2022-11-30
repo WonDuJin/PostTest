@@ -35,7 +35,9 @@ const server = http.createServer((req, res)=>{
           staticRoute("./test.txt",200,"text/html; charset=utf-8");
         })
         break;
-
+      case "/test":
+        staticRoute("./test.txt",200,"text/html; charset=utf-8");
+        break;
     }
   }
 });

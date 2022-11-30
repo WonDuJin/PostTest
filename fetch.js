@@ -36,6 +36,6 @@ data.addEventListener('submit',(e)=>{
 // buttonClick.addEventListener("click",()=>{
 //   location.href="http://localhost:5050/post"
 // })
-// const movePage =()=>{
-//   location.href="http://localhost:5050/post"
-// }
+const movePage =()=>{
+  location.href="http://localhost:5050/post"
+}
