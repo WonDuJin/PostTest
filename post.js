@@ -1,10 +1,6 @@
 const http = require("http");
 const fs = require("fs");
 
-
-let html = fs.readFileSync("./post.html",'utf-8')
-
-
 const server = http.createServer((req, res)=>{
 
 
