@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./fetch.js" type="module" defer></script>
+</head>
+<body>
+  <div id="root">
+    <form id="form">
+      <input id="input" name = "test" type="text">
+      <button id="button" type="submit" onclick="movePage()">버튼</button>
+    </form>
+  </div>
+
+  <script>
+    // const data = document.getElementById("form");
+
+    // data.addEventListener('submit',(e)=>{
+    //   e.preventDefault();
+
+    //   const test = new FormData(data);
+    //   console.log([...test])
+      
+    //   fetch("http://127.0.0.1:5432/post",{
+    //     method : "POST",
+    //     headers :{
+    //       "Content-Type" : "application/json",
+    //     },
+    //     body : test,        
+    //   })
+    //   .then((response) => response.json())
+    //   .then((data)=>console.log(data));
+    // })
+  </script>
+</body>
+</html>
